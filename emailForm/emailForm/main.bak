@@ -1,0 +1,33 @@
+const sendBtn = document.getElementById('send');
+const refreshBtn = document.getElementById('refresh');
+const form = document.getElementsByTagName('form')[0];
+
+//onchange u onblur al form
+form.addEventListener('change',function(e){
+    e.preventDefault();
+    
+    if ( emailValidation() && subjectValidation() && messageValidation() ) {
+        sendBtn.removeAttribute('disabled');
+        sendBtn.setAttribute('style','background-color:coral')
+    } else {
+        sendBtn.setAttribute('disabled', 'disabled');
+    }
+})
+
+//email validation function
+const emailValidation = function(){
+    let inputValue = document.getElementById('email-input').value;
+    return inputValue.includes('@');
+};
+
+//subject validation function
+const subjectValidation = function(){    
+    let inputValue = document.getElementById('subject-input').value;
+    return inputValue.length > 0;
+};
+
+//message validation function
+const messageValidation = function() {
+    let inputValue = document.getElementById('message-input').value;
+    return inputValue.length > 0;
+};
