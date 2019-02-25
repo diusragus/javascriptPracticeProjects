@@ -1,0 +1,71 @@
+const quotationBtn = document.getElementById('submit-btn');
+
+let fiat = document.getElementById('fiat').value;
+let cripto = document.getElementById('cripto').value;
+
+loadRestCripto = () => {
+    const url = 'https://api.coinmarketcap.com/v1/ticker/'; 
+    
+    fetch(url)
+        .then(data=>{return data.json()})
+        .then(res=>{
+                console.log(res);
+                let criptoArray = res.map();
+                saveCriptoList(criptoArray);
+        })
+        .catch(error=>{console.log(error)})
+}
+
+saveCriptoList(criptoArray){
+    console.log('hola');
+}
+
+class Quotation {
+    constructor(fiat,cripto) {
+        this.fiat = fiat;
+        this.cripto = cripto;        
+    }   
+
+}
+
+class Interface {
+    constructor(){}
+
+    showSpinner(){
+        let spinner = document.getElementById('spinner');
+        spinner.setAttribute('class','spinner');
+    }
+
+    unshowSpinner(){
+        let spinner = document.getElementById('spinner');
+        spinner.removeAttribute('class');
+    }  
+
+    showInfoDiv(){
+        let infoDiv = document.getElementById('info-div');
+        infoDiv.setAttribute('class','info-div');
+    }
+
+    unshowInfoDiv(){
+        let infoDiv = document.getElementById('info-div');
+        infoDiv.removeAttribute('class');
+    }
+
+    
+
+    loadCriptoNames(){
+
+    }
+
+    quotationEvent = () => quotationBtn.addEventListener('click',function(e){
+        e.preventDefault();
+        
+        
+    })
+     
+}
+
+const interface = new Interface();
+
+//interface.loadRestCriptoNames();
+//interface.quotationEvent();
