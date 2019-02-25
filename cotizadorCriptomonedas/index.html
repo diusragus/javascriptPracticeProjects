@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cotizador de Criptomonedas</title>
+        <link rel="stylesheet" href="materialize/css/materialize.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="title">Cotizador de Criptomonedas</h3>
+            <div id="card" class="card card-panel hoverable">
+                <div id="input-div" class="input-div">
+                    <form action="" id="form" class="col s12">
+                        <div id="row" class = "row">
+                            <label>Selecciona el tipo de monead FIAT</label>
+                            <select id="fiat" class = "browser-default">
+                                <option value = "" disabled selected>Selecciona la Moneda</option>
+                                <option value = "1">Dolar</option>
+                                <!--<option value = "1">Mango</option>
+                                <option value = "2">Orange</option>
+                                <option value = "3">Apple</option>-->
+                            </select>                                
+                            <label>Selecciona la criptomoneda</label>
+                            <select id="cripto" class = "browser-default">
+                                <option value = "" disabled selected>Selecciona la Moneda</option>
+                                <!--<option value = "1">Mango</option>
+                                <option value = "2">Orange</option>
+                                <option value = "3">Apple</option>-->
+                            </select>
+                            <button id="submit-btn" class="waves-effect waves-light btn submit-btn">Cotizar</button>  
+                        </div>        
+                    </form>
+                </div>
+                <div id="spinner" class="spinner"></div>
+                <div id="info-div" class="info-div">
+                    <h6>Cotización</h6>
+                    <div id="info-data" class="info-data"></div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
