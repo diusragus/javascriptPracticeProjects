@@ -58,6 +58,7 @@ class Interface {
             let criptoCoinSelect = document.getElementById('cripto');
             let selectedCriptoCoin = criptoCoinSelect.options[criptoCoinSelect.selectedIndex].value;
             
+            
             if (selectedFiatCoin === '' || selectedCriptoCoin === ''){
                 alert('Ambos campos son obligatorios');
             }else {
@@ -83,6 +84,7 @@ class Interface {
                             <p>Available Supply: ${quotation.available_supply}</p>
                             `
                          })
+                        .catch(error => {console.log(error)})
 
                     ui.showInfoDiv();
                 }, 500);               

@@ -1,6 +1,7 @@
 class Quotation {
     constructor() {
         this.obtainCoinList();
+        this.doQuotation();
     }
 
     async obtainCoinList() {

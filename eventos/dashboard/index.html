@@ -6,6 +6,7 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Eventos</title>
      <link rel="stylesheet" href="css/bootstrap.css">
+     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
@@ -30,15 +31,16 @@
 
                    <input type="submit" class="mt-5 form-control btn btn-success" id="buscarBtn" value="Buscar">
                </div>  
-               <div id="resultado-eventos" class="row mt-5"></div>
+               <div id="resultado-eventos" class="row mt-5 resultado-eventos" ></div>
            </div>
        
-           <footer class="mt-5 p-3 text-center bg-primary">
+           <footer class="">
                Buscador de Eventos &copy;
            </footer>
 
           <script src="../shared/service.js"></script> 
           <script src="controller.js"></script>
+          <script src="main.js"></script>
           
            <style>
                 .texto-info {
@@ -48,6 +50,15 @@
                 footer {
                      color: white;
                 }
+                .resultado-eventos{
+                    min-height: 80vh;
+                    max-height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: auto;
+                    padding-right: auto;
+                }
+                
            </style>
 </body>
 </html>
